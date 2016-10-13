@@ -1,0 +1,6 @@
+#!/bin/bash
+
+./test/clean
+./test/compile
+./test/compile_tests
+./test/unit_test
