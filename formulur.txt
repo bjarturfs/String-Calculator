@@ -1,0 +1,7 @@
+keyra allt = java -cp "classes/:lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore bjartur.stringcalculator.CalculatorTest 
+
+builda calculator.java = javac src/main/java/bjartur/stringCalculator/*.java -d classes
+
+builda Testcalculatir.java = javac -classpath "lib/junit-4.12.jar" src/test/java/bjartur/stringcalculator/*.java -d classes
+
+
