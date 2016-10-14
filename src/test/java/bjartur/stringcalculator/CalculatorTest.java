@@ -29,5 +29,13 @@ public class CalculatorTest {
 	public void testNewLineNumbers() {
 		assertEquals(6, Calculator.add("1,2\n3"));
 	}
+	@Test
+	public void testMinusNumbers() {
+		try{
+			Calculator.add("-1,2,-3");
+		}catch(IllegalArgumentException fail){
+		assertEquals("Negatives not allowed: -1,-3", fail.getMessage());
+		}
+	}
 
 }
