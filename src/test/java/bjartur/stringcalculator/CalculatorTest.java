@@ -38,4 +38,10 @@ public class CalculatorTest {
 		}
 	}
 
+	@Test
+	public void testToLargaNumbers() {
+		assertEquals(2, Calculator.add("1001,2"));
+		}
+
+
 }

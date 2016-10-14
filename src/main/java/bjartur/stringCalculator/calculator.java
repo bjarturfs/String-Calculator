@@ -33,7 +33,10 @@ public class Calculator {
 	private static  int sum(String[] numbers){
 		int total = 0;
 		for(String number : numbers){
-			total += toint(number);
+			if(toint(number) > 1000){
+				number = "0";
+			}
+				total += toint(number);
 		}
 		return total;
 	}
