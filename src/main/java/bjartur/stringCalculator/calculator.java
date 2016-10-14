@@ -18,6 +18,7 @@ public class Calculator {
 			else if(text.contains(",") || text.contains("\n")){
 					return sum(splitNumbers(text));
 			}
+
 			else
 					return 1;
 	}
@@ -25,9 +26,14 @@ public class Calculator {
 	private static int toint(String text){
 		return Integer.parseInt(text);
 	}
-  private static String[] splitNumbers(String numbers){
-		numbers = numbers.replaceAll("[\\\n]", ",");
-		return numbers.split(",");
+  private static String[] splitNumbers(String text){
+		String del = (",|\n");
+		if(text.startsWith("//")){
+			String[] delimeter = text.split("\n",2);
+			del = delimeter[0].substring(2);
+			text = delimeter[1];
+		}
+		return text.split(del);
 	}
 
 	private static  int sum(String[] numbers){

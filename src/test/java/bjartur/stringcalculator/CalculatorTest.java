@@ -43,5 +43,9 @@ public class CalculatorTest {
 		assertEquals(2, Calculator.add("1001,2"));
 		}
 
+	@Test
+	public void testDelimeter() {
+		assertEquals(6, Calculator.add("//a\n1a2a3"));
+			}
 
 }
